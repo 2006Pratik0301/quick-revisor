@@ -1,0 +1,148 @@
+.flashcards-carousel {
+  width: 100%;
+  max-width: 800px;
+  margin: 1.25rem auto 0; /* add top spacing so Back to Chapters doesn't touch cards */
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-card-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  min-height: 400px;
+}
+
+.carousel-card-container {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carousel-card-item {
+  min-width: 100%;
+  flex-shrink: 0;
+  padding: 0 0.5rem;
+}
+
+.carousel-nav-btn {
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border);
+  color: var(--text-primary);
+  font-size: 2.5rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex; /* ensure inline context and perfect centering */
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  line-height: 1;
+  padding: 0;
+  box-sizing: border-box; /* keep glyph centered accounting for border */
+}
+
+.carousel-nav-btn .chevron { display: inline-block; line-height: 1; }
+
+.carousel-nav-btn:hover {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+  transform: scale(1.1);
+}
+
+.carousel-nav-btn:active {
+  transform: scale(0.95);
+}
+
+.carousel-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carousel-counter {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.carousel-dot:hover {
+  background-color: var(--bg-tertiary);
+  border-color: var(--accent);
+}
+
+.carousel-dot.active {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    gap: 0.5rem;
+  }
+
+  .carousel-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+  }
+
+  .flashcards-carousel { margin-top: 1rem; }
+  .carousel-card-wrapper {
+    min-height: 350px;
+  }
+
+  .carousel-dots {
+    gap: 0.4rem;
+  }
+
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+
+/* Carousel-specific overrides to prevent hover jitter and double flip */
+.flashcards-carousel .card { transition: none; }
+.flashcards-carousel .card:hover { transform: none; box-shadow: var(--card-shadow); }
+.carousel-card-item { backface-visibility: hidden; -webkit-backface-visibility: hidden; transform-style: preserve-3d; }
+.carousel-nav-btn { z-index: 3; }
+/* Scoped wrapper to ensure hover doesn't trigger flip */
+.carousel-question-card .card { transition: none !important; }
+.carousel-question-card .card:hover { transform: none !important; box-shadow: var(--card-shadow) !important; }
+
+/* Scoped flip fixes to eliminate blink on answer side */
+.flashcards-carousel .flip-card { transition: transform 0.6s ease; transform-style: preserve-3d; }
+.flashcards-carousel .flip-card-front, .flashcards-carousel .flip-card-back { backface-visibility: hidden; -webkit-backface-visibility: hidden; pointer-events: none; }
+.flashcards-carousel .flip-card-back { transform: rotateY(180deg); }
+

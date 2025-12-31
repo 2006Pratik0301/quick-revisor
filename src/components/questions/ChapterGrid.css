@@ -1,0 +1,41 @@
+.chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.chapter-grid-item {
+  display: flex;
+}
+
+.chapter-card {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+
+.chapter-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.chapter-name {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  margin: 0;
+  flex: 1;
+}
+
+.chapter-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.click-hint {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-style: italic;
+}

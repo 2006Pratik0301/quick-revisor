@@ -1,0 +1,1 @@
+.chapter-tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}.chapter-tab{padding:8px 12px;border-radius:999px;border:1px solid var(--accent,#4a90e2);background:transparent;color:var(--accent,#4a90e2);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}.chapter-tab.active{background:var(--accent,#4a90e2);color:#fff}

@@ -1,0 +1,83 @@
+{
+  "short_name": "Quick Revisor",
+  "name": "Quick Revisor - Question & Answer App",
+  "description": "Fast question and answer revision app with voice input",
+  "icons": [
+    {
+      "src": "Quick_Remainder_App_Icon/android/android-launchericon-48-48.png",
+      "type": "image/png",
+      "sizes": "48x48",
+      "purpose": "any"
+    },
+    {
+      "src": "Quick_Remainder_App_Icon/android/android-launchericon-72-72.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "any"
+    },
+    {
+      "src": "Quick_Remainder_App_Icon/android/android-launchericon-96-96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "any"
+    },
+    {
+      "src": "Quick_Remainder_App_Icon/android/android-launchericon-144-144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any"
+    },
+    {
+      "src": "Quick_Remainder_App_Icon/android/android-launchericon-192-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "Quick_Remainder_App_Icon/android/android-launchericon-512-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "Quick_Remainder_App_Icon/ios/180.png",
+      "type": "image/png",
+      "sizes": "180x180",
+      "purpose": "any"
+    },
+    {
+      "src": "Quick_Remainder_App_Icon/ios/167.png",
+      "type": "image/png",
+      "sizes": "167x167",
+      "purpose": "any"
+    },
+    {
+      "src": "Quick_Remainder_App_Icon/ios/152.png",
+      "type": "image/png",
+      "sizes": "152x152",
+      "purpose": "any"
+    },
+    {
+      "src": "Quick_Remainder_App_Icon/ios/120.png",
+      "type": "image/png",
+      "sizes": "120x120",
+      "purpose": "any"
+    },
+    {
+      "src": "Quick_Remainder_App_Icon/ios/1024.png",
+      "type": "image/png",
+      "sizes": "1024x1024",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#4a90e2",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["education", "productivity"],
+  "screenshots": [],
+  "shortcuts": []
+}
+
